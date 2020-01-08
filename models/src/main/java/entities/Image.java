@@ -1,24 +1,19 @@
 package entities;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 public class Image {
 
-    private Integer id;
+    private String mongoId;
     private String title;
     private String content;
     private String filter;
 
     public String toString(){
 
-        return "id: " + id + " title: " + title + " content: " + content;
+        return "id: " + mongoId + " title: " + title + " content: " + content;
     }
 
-    public Integer getId() {
-        return id;
+    public String getMongoId() {
+        return mongoId;
     }
 
     public String getTitle() {
@@ -29,8 +24,8 @@ public class Image {
         return content;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setMongoId(String mongoId) {
+        this.mongoId = mongoId;
     }
 
     public void setTitle(String title) {

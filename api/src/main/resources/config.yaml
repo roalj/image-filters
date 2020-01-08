@@ -4,12 +4,16 @@ kumuluzee:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://image-filters:8080
+    base-url: http://localhost:8085
     http:
-      port: 8080
+      port: 8085
   config:
     etcd:
-      hosts: http://192.168.29.109:2379
+      hosts: http://localhost:2379
   discovery:
     etcd:
-      hosts: http://192.168.29.109:2379
+      hosts: http://localhost:2379
+  health:
+    checks:
+      disk-space-health-check:
+        threshold: 100000000

@@ -2,40 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40bde1fe-d0ee-4135-b35d-b277a7dc424a" name="Default Changelist" comment="added send mongoId to image-catalog">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_jhlabs_filters_2_0_235_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_imagej_ij_1_52i.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/src/main/java/entities/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/src/main/java/beans/ImageProcessing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/image-upload.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/image-filters.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_2_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/api/api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/aljosa/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/com/aljosa/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/com/aljosa/TestDbHealthCheck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/resource/ImageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/resource/ImageResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/resources/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/resources/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/api-1.0-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/classes/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/models-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/lib/models-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/target/classes/lib/services-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/lib/services-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/target/classes/resource/ImageResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/resource/ImageResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k8s/image-upload-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/image-filters-deployment.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.iml" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/models/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/k8s/image-filters-deployment.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/k8s/image-filters-deployment.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/src/main/java/entities/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/models/src/main/java/entities/Image.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/src/main/java/entities/ImageEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/target/classes/entities/ImageEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/services/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/services.iml" beforeDir="false" afterPath="$PROJECT_DIR$/services/services.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/beans/ImageBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/beans/MongoConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/src/main/java/beans/MongoHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/target/classes/beans/ImageBean$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/target/classes/beans/ImageBean.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/target/classes/entities/Image.class" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/classes/entities/Image.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/target/models-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/models/target/models-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/src/main/java/beans/ImageProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/services/src/main/java/beans/ImageProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/target/classes/beans/ImageProcessing.class" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/classes/beans/ImageProcessing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/target/services-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/services/target/services-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,53 +84,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="image-filters" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="image-filters" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -166,7 +104,8 @@
       <workItem from="1575194488117" duration="21250000" />
       <workItem from="1577526215780" duration="1314000" />
       <workItem from="1577627946634" duration="83328000" />
-      <workItem from="1578066054420" duration="19224000" />
+      <workItem from="1578066054420" duration="22632000" />
+      <workItem from="1578436358487" duration="9742000" />
     </task>
     <task id="LOCAL−00001" summary="added end points for saveImage and getImage">
       <created>1575202522364</created>

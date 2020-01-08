@@ -1,22 +1,66 @@
 package beans;
 
 import com.jhlabs.image.*;
+import com.kumuluz.ee.discovery.annotations.DiscoverService;
 import entities.Constants;
+import entities.Image;
 import org.apache.commons.codec.binary.Base64;
 
+import javax.annotation.PostConstruct;
 import javax.enterprise.context.ApplicationScoped;
 import javax.imageio.ImageIO;
+import javax.inject.Inject;
+import javax.ws.rs.InternalServerErrorException;
+import javax.ws.rs.ProcessingException;
+import javax.ws.rs.WebApplicationException;
+import javax.ws.rs.client.Client;
+import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Optional;
+import java.util.logging.Logger;
 
 
 @ApplicationScoped
 public class ImageProcessing {
     private BufferedImage imageDest;
 
+    private Client httpClient;
+    private Logger log = Logger.getLogger(ImageProcessing.class.getName());
 
+
+    @PostConstruct
+    private void init() {
+        httpClient = ClientBuilder.newClient();
+        //baseUrl = "http://comments:8081"; // only for demonstration
+    }
+   @Inject
+    @DiscoverService(value = "image-upload-services", environment = "dev", version = "1.0.0")
+    private Optional<String> baseUrlImageUpload;
+
+
+    public Response getImageFromUpload(Image image) {
+        //za test klici direktno na server
+        if (baseUrlImageUpload.isPresent()) {
+                log.info("test2");
+                log.info("Calling baseUrlImageCatalog service:saving image. " + image.getMongoId());
+                log.info("baseUrlImageCatalog " + baseUrlImageUpload.get() + "/api/images/getImage/"+image.getMongoId());
+
+            try {
+                    return httpClient.target(baseUrlImageUpload.get() + "/api/images/getImage/"+image.getMongoId())
+                            .request(MediaType.APPLICATION_JSON)
+                            .get();
+                } catch (WebApplicationException | ProcessingException e) {
+                    log.severe(e.getMessage());
+                    throw new InternalServerErrorException(e);
+                }
+            }
+        return null;
+    }
 
     /*public static String encodeToString(BufferedImage image, String type) {
         String imageString = null;
