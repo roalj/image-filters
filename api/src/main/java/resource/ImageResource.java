@@ -1,6 +1,9 @@
 package resource;
 
 import beans.ImageProcessing;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import com.kumuluz.ee.discovery.annotations.DiscoverService;
 import entities.Image;
 
@@ -12,6 +15,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.IOException;
 import java.util.Optional;
 import java.util.logging.Logger;
 
@@ -31,7 +35,6 @@ public class ImageResource {
     }
 
 
-//todo namesto, da posiljas sliko posljes id slike in jo preberes iz baze
     @POST
     @Path("/filterImage/")
     public Response filterImage(Image image) {
@@ -39,15 +42,18 @@ public class ImageResource {
 
         System.out.println("filterImage" + image.toString());
         //
-        Response response = imageProcessing.getImageFromUpload(image);
-        System.out.println("entity" + response.toString());
-        System.out.println("entity1" + response.getEntity());
-        System.out.println("entity2" + response);
+        String imageEncoded = imageProcessing.getImageFromUpload(image);
 
-        Image image1 = (Image) response.getEntity();
-        System.out.println("image1" + image1.getContent());
+        //String imageEncoded = image.getContent();
 
-        //String filteredImage = imageProcessing.getFilteredImage(image.getContent(), image.getFilter());
-        return Response.ok(response).build();
+        System.out.println("image1" + imageEncoded);
+
+        String filteredImage = imageProcessing.getFilteredImage(imageEncoded, image.getFilter());
+
+        System.out.println("image2" + filteredImage);
+        Image filteredImage2 = new Image();
+        filteredImage2.setContent(filteredImage);
+
+        return Response.ok(filteredImage2).build();
     }
 }

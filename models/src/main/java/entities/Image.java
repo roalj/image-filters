@@ -9,7 +9,7 @@ public class Image {
 
     public String toString(){
 
-        return "id: " + mongoId + " title: " + title + " content: " + content;
+        return "id: " + mongoId + " title: " + title + " content: " + content + " filter : "+ filter;
     }
 
     public String getMongoId() {

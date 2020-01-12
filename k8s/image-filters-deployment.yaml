@@ -13,7 +13,7 @@ spec:
         app: image-filters
     spec:
       containers:
-        - image: eu.gcr.io/modified-badge-260712/image-filters:v10
+        - image: eu.gcr.io/modified-badge-260712/image-filters:v17
           name: image-filters
           env:
             - name: KUMULUZEE_DISCOVERY_CLUSTER
@@ -23,7 +23,7 @@ spec:
             - name: KUMULUZEE_CONFIG_ETCD_HOSTS
               value: http://etcd:2379
             - name: KUMULUZEE_SERVER_BASEURL
-              value: http://34.76.167.182:8085
+              value: http://35.240.57.161:8085
           ports:
             - containerPort: 8085
               name: server

@@ -15,6 +15,7 @@ import javax.ws.rs.ProcessingException;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
+import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.awt.image.BufferedImage;
@@ -43,17 +44,16 @@ public class ImageProcessing {
     private Optional<String> baseUrlImageUpload;
 
 
-    public Response getImageFromUpload(Image image) {
+    public String getImageFromUpload(Image image) {
         //za test klici direktno na server
         if (baseUrlImageUpload.isPresent()) {
                 log.info("test2");
                 log.info("Calling baseUrlImageCatalog service:saving image. " + image.getMongoId());
-                log.info("baseUrlImageCatalog " + baseUrlImageUpload.get() + "/api/images/getImage/"+image.getMongoId());
 
             try {
-                    return httpClient.target(baseUrlImageUpload.get() + "/api/images/getImage/"+image.getMongoId())
+                    return httpClient.target(baseUrlImageUpload.get() + "/api/images/getImageString/"+image.getMongoId())
                             .request(MediaType.APPLICATION_JSON)
-                            .get();
+                            .get(new GenericType<String>(){});
                 } catch (WebApplicationException | ProcessingException e) {
                     log.severe(e.getMessage());
                     throw new InternalServerErrorException(e);
@@ -112,7 +112,7 @@ public class ImageProcessing {
         String base64String = null;
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         try {
-            ImageIO.write(bufferedImage, "png", baos);
+            ImageIO.write(bufferedImage, "jpg", baos);
             byte[] byteArray = baos.toByteArray();
             //System.out.println("byte array: " + byteArray.toString()) ;
             base64String = Base64.encodeBase64String(byteArray);
@@ -139,8 +139,12 @@ public class ImageProcessing {
 
     public String getFilteredImage(String base64, String filter){
         BufferedImage srcImage = decodeToImage(base64);
-        BufferedImage sharpImage = setFilter(srcImage, filter);
-        return backToString(sharpImage);
+        if(srcImage != null){
+            BufferedImage sharpImage = setFilter(srcImage, filter);
+            return backToString(sharpImage);
+        }
+        System.out.println("ImageProcessing "+ "src image is null");
+        return null;
     }
 
     public BufferedImage setFilter(BufferedImage imageScr, String filter){
